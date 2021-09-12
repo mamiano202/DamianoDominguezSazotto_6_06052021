@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishEye</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="foto.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- <script type='module' src="js/main.js"></script> -->
+</head>
+
+<body>
+    <header role="banner">
+        <a href="index.html" title="HomePage"><img
+                src="https://res.cloudinary.com/dps3eww2i/image/upload/v1609005020/P6-img/logo.png"
+                alt="FishEye Home Page"></a>
+    </header>
+    <main>
+        <!-- HEADER -->
+        <header id="ph-profil" aria-label="photographer information">
+            <section id="ph-profil-header">
+                <article aria-label="Photographer Profil" class="ph-profil">
+                    <div class="ph-infos">
+                        <h2>Ellie Rose Williams</h2>
+                        <p class="ph-city">Paris, France</p>
+                        <p class="ph-tagline">Capturer des compositions complexes</p>
+                        <p>
+                        <div class="allTag">
+                            <ul class="tag">
+                                <a href='#'>
+                                    <li data-filter="portrait">#sport</li>
+                                </a>
+                            </ul>
+
+
+                            <ul class="tag">
+                                <a href='#'>
+                                    <li data-filter="events">#architecture</li>
+                                </a>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <button id="ph-contact" title="Contact Me">Contactez-moi</button>
+                    <a href="#" title="Ellie-Rose"><img src="Sample Photos/Photographers ID Photos/EllieRoseWilkens.jpg"
+                            alt="Mimi Keel portrait"></a>
+                </article>
+            </section>
+        </header>
+
+        <!-- DROPDOWN -->
+        <div class="works-sort">
+            
+            <span id="sort-text">Trier par</span>
+            <div id="sort-wrapper">
+                <button class="sort-btn" aria-haspopup="listbox">Popularité</button>
+                <span class="fas fa-chevron-down arrow-down-open" role="button"></span>
+                <ul class="hidden-sort" role="listbox">
+                    <li class="sort" role="option">Popularité <span class="fas fa-chevron-up arrow-up-close"></span>
+                    </li>
+                    <li class="sort" role="option">Date</li>
+                    <li class="sort" role="option">Tître</li>
+                </ul>
+            </div>
+        
+        </div>
+
+        <!-- WORK -->
+        <section id='ph-works' aria-label='photographer works'>
+            
+            
+            <article class="ph-work-elt">
+                <a href="#" title="Wild" horses="">
+                    <video controls="controls" src="Sample Photos/Ellie Rose/Sport_Tricks_in_the_air.mp4"
+                        role="button" class="ph-media"></video>
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Tricks in air</h2>
+                    <span class="ph-work-price">70 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">150</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="142"></i>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="ph-work-elt">
+                <a href="#" title="Next Hold">
+                    <img src="Sample Photos/Ellie Rose/Sport_Next_Hold.jpg" alt="Travel Lonesome" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Next Hold</h2>
+                    <span class="ph-work-price">65 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">101</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="ph-work-elt">
+                <a href="#" title="Wednesday">
+                    <img src="Sample Photos/Ellie Rose/sport_water_tunnel.jpg" alt="Travel Lonesome" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Water Tunnel</h2>
+                    <span class="ph-work-price">70 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">103</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="ph-work-elt">
+                <a href="#" title="Sky Cross">
+                    <img src="Sample Photos/Ellie Rose/Sport_Sky_Cross.jpg" alt="sky cross" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Sky Cross</h2>
+                    <span class="ph-work-price">50 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">77</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="ph-work-elt">
+                <a href="#" title="Race end">
+                    <img src="Sample Photos/Ellie Rose/Sport_Race_End.jpg" alt="race end" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Race End</h2>
+                    <span class="ph-work-price">65 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">88</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="ph-work-elt">
+                <a href="#" title="Jump">
+                    <img src="Sample Photos/Ellie Rose/Sport_Jump.jpg" alt="Jump" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Jump</h2>
+                    <span class="ph-work-price">70 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">95</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="ph-work-elt">
+                <a href="#" title="Pinto Wedding">
+                    <img src="Sample Photos/Ellie Rose/Architecture_White_Light.jpg" alt="white light" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">White Light</h2>
+                    <span class="ph-work-price">75 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">52</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            <article class="ph-work-elt">
+                <a href="#" title="Benevides Wedding">
+                    <img src="Sample Photos/Ellie Rose/Architecture_Water_on_Modern.jpg" alt="Water modern" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Water Modern</h2>
+                    <span class="ph-work-price">72 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">55</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ph-work-elt">
+                <a href="#" title="Horseshoe">
+                    <img src="Sample Photos/Ellie Rose/Architecture_Horseshoe.jpg" alt="Horseshoe" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Horseshoe</h2>
+                    <span class="ph-work-price">71 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">85</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="ph-work-elt">
+                <a href="#" title="Cross Bar">
+                    <img src="Sample Photos/Ellie Rose/Architecture_Cross_Bar.jpg" alt="Cross Bar" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Cross Bar</h2>
+                    <span class="ph-work-price">58 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">66</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="ph-work-elt">
+                <a href="#" title="Connected Curves">
+                    <img src="Sample Photos/Ellie Rose/Architecture_Connected_Curves.jpg" alt="connected curves" role="button"
+                        class="ph-media">
+                </a>
+                <div class="ph-work-elt-text">
+                    <h2 class="ph-work-title">Connected Curves</h2>
+                    <span class="ph-work-price">80 €</span>
+                    <div class="ph-elt-like">
+                        <span class="ph-work-like">
+                            <a class="like-counter">79</a>
+                        </span>
+                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- BOX -->
+        <div id="box" aria-label="photographer likes and price">
+
+
+            <span id="total-likes">680</span>
+            <i class="fas fa-heart" aria-label="likes"></i>
+            <span>400 €/ jour</span>
+
+
+        </div>
+
+        <!--MODAL-->
+        <div role="dialog" id="form-dialog" aria-label="contact me form" aria-labelledby="form-title"
+            aria-hidden="true">
+            <form action="photographer-page.html" method="POST" id="contact-form">
+                <header aria-label="contact form header">
+                    <h1 id="form-title">
+                        <span>Contactez-moi</span>
+                        <span id="ph-form-name"></span>
+                    </h1>
+                    <button id="close-btn" title="Close form" type="button">
+                        <span class="fas fa-times close-form-icon" aria-hidden="true"></span>
+                    </button>
+                </header>
+                <!-- FIRST NAME -->
+                <div class="formData" data-error="Vous devez entrer votre prénom." data-error-visible="false">
+                    <label for="first-name" id="label-firstname">Prénom</label>
+                    <input name="first-name" id="first-name" aria-labelledby="label-firstname" placeholder="Prénom">
+                </div>
+                <!-- LAST NAME -->
+                <div class="formData" data-error="Vous devez entrer votre nom." data-error-visible="false">
+                    <label for="last-name" id="label-lastname">Nom</label>
+                    <input name="last-name" id="last-name" aria-labelledby="label-lastname" placeholder="Nom">
+                </div>
+                <!-- EMAIL -->
+                <div class="formData" data-error="Vous devez entrer un email valide." data-error-visible="false">
+                    <label for="email" id="label-email">Email</label>
+                    <input type="email" name="email" id="email" aria-labelledby="label-email"
+                        placeholder="exemple@email.com">
+                </div>
+                <!-- MESSAGE -->
+                <div class="formData" data-error="Vous devez entrer votre message." data-error-visible="false">
+                    <label for="message" id="label-message">Votre message</label>
+                    <textarea name="message" id="message" cols="20" rows="5" aria-labelledby="label-message"
+                        placeholder="Votre message..."></textarea>
+                </div>
+                <!-- SUBMIT -->
+                <input type="submit" value="Envoyer" class="form-submit" title="Send">
+            </form>
+        </div>
+
+        <!--LIGHTBOX-->
+        <aside id="works-lightbox" aria-hidden="true">
+            <article id="lightbox-body" role='dialog'>
+                <span class="fas fa-times close-lightbox-icon" role="button" title="Close dialog"></span>
+                <span class="fas fa-chevron-left left-arrow-lightbox" role="button" title="Previous image"></span>
+                <span class="fas fa-chevron-right right-arrow-lightbox" role="button" title="Next image"></span>
+                <div id="works-lightbox-media"></div>
+                <div id="works-lightbox-name"></div>
+            </article>
+        </aside>
+    </main>
+
+</body>
+
+</html>
