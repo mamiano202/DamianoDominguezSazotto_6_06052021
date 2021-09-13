@@ -26,9 +26,7 @@
     }
 }
 /* DROPDOWN */
-.works-sort {
-    display: none;
-}
+
 
 @media (min-width: 900px) {
     .arrow-down-open {
@@ -71,9 +69,13 @@
     }
 
     .works-sort {
-        display: block;
-        margin-left: 2rem;
-        margin-top: 2rem;
+        
+            display: flex;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            align-content: center;
+            align-items: center;
+        
     }
 
     .works-sort>span {
