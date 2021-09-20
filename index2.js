@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-
-    <title>Our superheroes</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <header>
-
-    </header>
-
-    <section>
-
-    </section>
-
-    <script>
-        const header = document.querySelector('header');
-        const section = document.querySelector('section');
-        
+const header = document.querySelector('header');
+const section = document.querySelector('.profil');
 
         
         var requestURL = 'data2.json';
@@ -47,9 +23,9 @@
 
 
         function populateHeader(jsonObj) {
-            var myH1 = document.createElement('h1');
-            myH1.textContent = jsonObj['squadName'];
-            header.appendChild(myH1);
+            // var myH1 = document.createElement('h1');
+            // myH1.textContent = jsonObj['squadName'];
+            // header.appendChild(myH1);
 
             var myPara = document.createElement('p');
             myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + jsonObj['formed'];
@@ -76,9 +52,9 @@
     var myList = document.createElement('ul');
 
     // myH2.textContent = heroes[i].name; //futuro lugar de la foto
-    myPara1.textContent = 'name ' +heroes[i].name;
+    myPara1.textContent = heroes[i].name;
     myPara2.textContent = 'id ' + heroes[i].id;
-    myPara3.textContent = 'city ' + heroes[i].city;
+    myPara3.textContent = heroes[i].city;
     myPara4.textContent = heroes[i].country;
     myPara5.textContent = heroes[i].tags;
     myPara6.textContent = heroes[i].tagline;
@@ -93,7 +69,7 @@
     //   myList.appendChild(listItem);
     // }
 
-    // myArticle.appendChild(myH2);
+    myArticle.appendChild(myH2);
     myArticle.appendChild(myPara1);
     myArticle.appendChild(myPara2);
     myArticle.appendChild(myPara3);
@@ -102,13 +78,8 @@
     myArticle.appendChild(myPara6);
     myArticle.appendChild(myPara7);
     myArticle.appendChild(myPara8);
-    // myArticle.appendChild(myList);
+    myArticle.appendChild(myList);
 
     section.appendChild(myArticle);
   }
 }
-
-    </script>
-</body>
-
-</html>
