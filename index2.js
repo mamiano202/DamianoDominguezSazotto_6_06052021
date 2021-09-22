@@ -28,8 +28,8 @@ const section = document.querySelector('.profil');
             // header.appendChild(myH1);
 
             var myPara = document.createElement('p');
-            myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + jsonObj['formed'];
-            header.appendChild(myPara);
+            // myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + jsonObj['formed'];
+            // header.appendChild(myPara);
         }
 
 
