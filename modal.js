@@ -10,21 +10,21 @@
   
   // DOM Elements
   const modalBg = document.querySelector("#form-dialog");
-  const modalBtn = document.querySelectorAll(".modal-btn");
-  const formData = document.querySelectorAll(".formData");
+  const modalBtn = document.querySelectorAll("#ph-contact");
+  // const formData = document.querySelectorAll(".formData");
   
-  function displayConfirmation(display) {
-    const modalConf = document.querySelector(".confsubmit");
-    const modalBd = document.querySelector(".modal-body");
+  // function displayConfirmation(display) {
+  //   const modalConf = document.querySelector(".confsubmit");
+  //   const modalBd = document.querySelector(".modal-body");
   
-    if (display) {
-      modalBd.style.display = "none";
-      modalConf.style.display = "block";
-    } else {
-      modalBd.style.display = "block";
-      modalConf.style.display = "none";
-    }
-  }
+  //   if (display) {
+  //     modalBd.style.display = "none";
+  //     modalConf.style.display = "block";
+  //   } else { 
+  //     modalBd.style.display = "block";
+  //     modalConf.style.display = "none";
+  //   }
+  // }
   
   // launch modal event
   modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -36,7 +36,7 @@
   // Launch modal form
   function launchModal() {
     modalBg.style.display = "block";
-    displayConfirmation(false);
+    
   }
   function closeModal() {
     modalBg.style.display = "none";
