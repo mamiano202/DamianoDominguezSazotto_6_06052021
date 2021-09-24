@@ -1,41 +1,44 @@
-'use strict';
-/////////////////////////////////////////
-
-export default class Modal {
-    // Events, launch/close the modal by clicking on the 'contact me' button
-    modal(data) {
-        let modalBtn = document.getElementById("ph-contact");
-        let closeBtn = document.getElementsByClassName('close-form-icon');
-
-        if (modalBtn) {
-            modalBtn.addEventListener('click', this.launchModal);
-            this.formPhName(data);
-        }
-        if (closeBtn) {
-            closeBtn[0].addEventListener('click', this.closeModal);
-        }
+// Nav responsive
+// function editNav() {
+//     var x = document.getElementById("myTopnav");
+//     if (x.className === "topnav") {
+//       x.className += " responsive";
+//     } else {
+//       x.className = "topnav";
+//     }
+//   }
+  
+  // DOM Elements
+  const modalBg = document.querySelector("#form-dialog");
+  const modalBtn = document.querySelectorAll(".modal-btn");
+  const formData = document.querySelectorAll(".formData");
+  
+  function displayConfirmation(display) {
+    const modalConf = document.querySelector(".confsubmit");
+    const modalBd = document.querySelector(".modal-body");
+  
+    if (display) {
+      modalBd.style.display = "none";
+      modalConf.style.display = "block";
+    } else {
+      modalBd.style.display = "block";
+      modalConf.style.display = "none";
     }
-
-    // LAUNCH MODAL
-    launchModal() {
-        let modalbg = document.getElementById("form-dialog");
-
-        modalbg.style.display = 'block';
-    }
-
-    // CLOSE MODAL
-    closeModal() {
-        let modalbg = document.getElementById("form-dialog");
-
-        modalbg.style.display = 'none';
-    }
-
-    // DISPLAY PH NAMES IN FORM
-    formPhName(data) {
-        let id = window.location.search.split('id=')[1];
-        let photographers = !id ? data : data.filter(photographer => photographer.id == id);
-        let phName = document.getElementById('ph-form-name');
-        let phNameTemplate = `${photographers[0].name}`
-        phName.innerHTML = phNameTemplate;
-    }
-}
+  }
+  
+  // launch modal event
+  modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+  
+  // close modal form
+  document.getElementById("closeform").addEventListener("click", closeModal);
+  
+  
+  // Launch modal form
+  function launchModal() {
+    modalBg.style.display = "block";
+    displayConfirmation(false);
+  }
+  function closeModal() {
+    modalBg.style.display = "none";
+  }
+  

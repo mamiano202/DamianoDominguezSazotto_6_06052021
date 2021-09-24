@@ -18,9 +18,8 @@ request.onload = function () {
 
 function populateHeader(jsonObj) {
   
-
   var myPara = document.createElement("p");
- 
+
 }
 
 function showHeroes(jsonObj) {
@@ -29,7 +28,7 @@ function showHeroes(jsonObj) {
   for (var i = 0; i < heroes.length; i++) {
     var myArticle = document.createElement("article");
     myArticle.innerHTML = /*html*/ `
-        <a  href="photographer.html">
+        <a  href="/photographer.html?id=112344">
             <img src="Sample Photos/Photographers ID Photos/MimiKeel.jpg" alt="MimiKeel">
         </a>
         <div class="name">${heroes[i].name}</div>
@@ -51,15 +50,13 @@ function showHeroes(jsonObj) {
                     
                 
             </ul>
-            
-            
-           
+              
         </div>
     `;
 
-    var myList = document.createElement("ul");
+    // var myList = document.createElement("ul");
 
- 
+    
 
     section.appendChild(myArticle);
   }

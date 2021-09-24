@@ -53,8 +53,19 @@ form .close-form-icon {
     color: #fff;
     font-size: 2em;
     margin-top: .6rem;
+    
 }
-
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(0.7);
+    background-color: aquamarine;
+  }
 form .close-form-icon:hover,
 form .form-submit:hover {
     cursor: pointer;
