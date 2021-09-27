@@ -1,7 +1,7 @@
 const header = document.querySelector("header");
 const section = document.querySelector(".profil");
 
-var requestURL = "data2.json";
+var requestURL = "data.json";
 
 var request = new XMLHttpRequest();
 
@@ -24,12 +24,13 @@ function populateHeader(jsonObj) {
 
 function showHeroes(jsonObj) {
   var heroes = jsonObj["photographers"];
+  
 
   for (var i = 0; i < heroes.length; i++) {
     var myArticle = document.createElement("article");
     myArticle.innerHTML = /*html*/ `
-        <a  href="/photographer.html?id=112344">
-            <img src="Sample Photos/Photographers ID Photos/MimiKeel.jpg" alt="MimiKeel">
+        <a  href="./photographer.html?id=${heroes[i].id}">
+            <img src="Sample Photos/Photographers ID Photos/${heroes[i].portrait}" alt="${heroes[i].name}">
         </a>
         <div class="name">${heroes[i].name}</div>
                     
@@ -38,25 +39,29 @@ function showHeroes(jsonObj) {
         <div class="slogan">${heroes[i].tagline}</div>
 
         <div class="price">${heroes[i].price}€</div>
+        
                     
-        <div class="allTag">
-            <ul class="tag">
-                    
-                    
-                    <li data-filter="tags">${heroes[i].tags[0]}</li>
-                    <li data-filter="tags">${heroes[i].tags[1]}</li>
-                    <li data-filter="tags">${heroes[i].tags[2]}</li>
-                    <li data-filter="tags">${heroes[i].tags[3]}</li>
-                    
-                
-            </ul>
+      
               
         </div>
-    `;
+        
+    `//liste pour les tags
+    var myList = document.createElement("ul");
+    myList.classList.add("tags")
+    // myList.style.display="flex";
+    // myList.style.paddingLeft="0"
+    // boucle pour les tags
+    var superPowers = heroes[i].tags;
+    for (var j = 0; j < superPowers.length; j++) {
+      var listItem = document.createElement('li');
+      listItem.textContent = superPowers[j];
+      myList.appendChild(listItem);
+    }
+    ;
 
-    // var myList = document.createElement("ul");
 
     
+    myArticle.appendChild(myList);
 
     section.appendChild(myArticle);
   }

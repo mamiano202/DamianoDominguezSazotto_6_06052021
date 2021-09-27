@@ -11,6 +11,7 @@
   // DOM Elements
   const modalBg = document.querySelector("#form-dialog");
   const modalBtn = document.querySelectorAll("#ph-contact");
+  modalBg.style.display="none";
   // const formData = document.querySelectorAll(".formData");
   
   // function displayConfirmation(display) {

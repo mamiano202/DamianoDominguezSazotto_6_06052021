@@ -80,7 +80,7 @@ main > a {
   .tags {
     display: flex;
     justify-content: center;
-    margin-right: 0;
+    padding-left: 0;
   }
 
   section {
