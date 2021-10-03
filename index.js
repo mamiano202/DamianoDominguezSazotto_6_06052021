@@ -48,13 +48,12 @@ function showHeroes(jsonObj) {
     `//liste pour les tags
     var myList = document.createElement("ul");
     myList.classList.add("tags")
-    // myList.style.display="flex";
-    // myList.style.paddingLeft="0"
+    
     // boucle pour les tags
     var superPowers = heroes[i].tags;
     for (var j = 0; j < superPowers.length; j++) {
       var listItem = document.createElement('li');
-      listItem.textContent = superPowers[j];
+      listItem.textContent = "#"+superPowers[j];
       myList.appendChild(listItem);
     }
     ;
