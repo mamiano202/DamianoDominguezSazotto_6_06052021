@@ -16,16 +16,15 @@ console.log(id);
 // Récupération liste des photographes
 window.onload = function () {
   $.get("data.json", function (data) {
-    // console.log(data);
+    console.log(data);
     console.log(data["photographers"]);
-  });
 
+    const photograph = data["photographers"].find(photograph => photograph.id == id);
+    console.log(photograph);
+  });
 };
 
-//Utilisation de la méthode .find()
 
 
-console.log(response);
 
-const idProduitSelectionner = response.find((element) => photographers.id === id);
-console.log(idProduitSelectionner);
+

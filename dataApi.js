@@ -1,4 +1,4 @@
-// const response =[
+// const arr =[
 //     {
 
 //     "photographers": [
