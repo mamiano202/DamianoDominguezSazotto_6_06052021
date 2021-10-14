@@ -1,5 +1,6 @@
-/* FORM */
-#form-dialog {
+ /* Modal */
+  /* FORM */
+  #form-dialog {
     border: none;
     border-radius: .3rem;
     display: block; /* pasarlo en none luego*/

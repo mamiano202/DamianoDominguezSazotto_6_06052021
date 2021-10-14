@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FishEye</title>
-    <link rel="stylesheet" href="photographers.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="foto.css">
     <link rel="stylesheet" href="modal.css">
-    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     
@@ -26,14 +26,39 @@
         <header id="ph-profil" aria-label="photographer information">
             <section id="ph-profil-header">
                 <article aria-label="Photographer Profil" class="ph-profil">
-                    <button id="ph-contact" title="Contact Me">Contactez-moi</button>
-
                     <div class="ph-infos">
+                        <h2>Mimi Keel</h2>
+                        <p class="ph-city">London, UK</p>
+                        <p class="ph-tagline">Voir le beau dans le quotidien</p>
+                        <p>
+                        <div class="allTag">
+                            <ul class="tag">
+                                <a href='#'>
+                                    <li data-filter="portrait">#portrait</li>
+                                </a>
+                            </ul>
 
+
+                            <ul class="tag">
+                                <a href='#'>
+                                    <li data-filter="events">#events</li>
+                                </a>
+                            </ul>
+                            <ul class="tag">
+                                <a href='#'>
+                                    <li data-filter="travels">#travels</li>
+                                </a>
+                            </ul>
+                            <ul class="tag">
+                                <a href='#'>
+                                    <li data-filter="animals">#animals</li>
+                                </a>
+                            </ul>
+                        </div>
                     </div>
-                    
-
-                    
+                    <button id="ph-contact" title="Contact Me">Contactez-moi</button>
+                    <a href="#" title="Mimi Keel portrait"><img src="Sample Photos/Photographers ID Photos/MimiKeel.jpg"
+                            alt="Mimi Keel portrait"></a>
                 </article>
             </section>
         </header>
@@ -60,7 +85,7 @@
 
         <!-- WORK -->
         <section id='ph-works' aria-label='photographer works'>
-            <!-- <article class="ph-work-elt">
+            <article class="ph-work-elt">
                 <a href="#" title="Lonesome">
                     <img src="Sample Photos/Mimi/Travel_Lonesome.jpg" alt="Travel Lonesome" role="button"
                         class="ph-media">
@@ -219,12 +244,12 @@
                         <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
                     </div>
                 </div>
-            </article> -->
+            </article>
 
         </section>
 
         <!-- BOX -->
-        <!-- <div id="box" aria-label="photographer likes and price">
+        <div id="box" aria-label="photographer likes and price">
 
 
             <span id="total-likes">680</span>
@@ -232,7 +257,7 @@
             <span>400 €/ jour</span>
 
 
-        </div> -->
+        </div>
 
         
 
@@ -281,13 +306,14 @@ aria-hidden="true">
 </form>
 </div>
 
-    
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="modal.js"></script>
     <script src="photographer.js"></script>
-    
-    
-    
+    <!-- <script src="dataApi.js"></script> -->
+    <!-- <script src="test.js"></script> -->
 </body>
 
 </html>
