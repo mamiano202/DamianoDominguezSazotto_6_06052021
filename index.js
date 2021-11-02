@@ -57,5 +57,10 @@ function showHeroes(jsonObj) {
 
     section.appendChild(myArticle);
   }
+
+//tags selection
+// const filTag = superPowers.filter((media) => media.photographerId == id);
+
+
 }
 

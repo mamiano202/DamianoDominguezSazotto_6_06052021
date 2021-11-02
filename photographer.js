@@ -29,9 +29,7 @@ window.onload = function () {
     function profilFunction(duval) {
       // console.log(duval);
       const section = document.querySelector(".ph-infos");
-      // var myArticle = document.createElement("article");
 
-      
       section.innerHTML = /*html*/ `
                 
                 <div class="AAA"><h2>${photograph.name}</h2>
@@ -43,21 +41,24 @@ window.onload = function () {
               
               
 
-              `; 
+              `;
+
+      document.getElementById(
+        "priceTjm"
+      ).innerText = `${photograph.price} €/jour`;
       //liste pour les tags
-      var AAA= document.querySelector(".AAA")
+      var AAA = document.querySelector(".AAA");
       var allTag = document.createElement("ul");
       allTag.classList.add("tags");
-      
 
       // boucle pour les tags
       var superTags = photograph.tags;
-      
+
       // console.log(superTags);
       for (var j = 0; j < superTags.length; j++) {
         var listItem = document.createElement("li");
         listItem.textContent = "#" + superTags[j];
-        
+
         allTag.appendChild(listItem);
         AAA.appendChild(allTag);
 
@@ -69,106 +70,95 @@ window.onload = function () {
       const media = data["media"].filter((media) => media.photographerId == id);
       const media1 = media.filter((media) => media.image);
       const media2 = media.filter((media) => media.video);
-     
-      // console.log(media1);
-      // console.log(media2);
-      
-
-      // console.log(media[k].image)
 
       // Boucle pour photo
-      for (var k = 0; k < media1.length; k++) {
+
+      media1.forEach((element) => {
         const section2 = document.querySelector("#ph-works");
         var myArticle2 = document.createElement("article");
         myArticle2.innerHTML = /*html*/ `
-      
-  <a href="#" title="${media1[k].title}">
-  <img src="Sample Photos/${photograph.name}/${media1[k].image}" alt="${
-          media1[k].title
-        }" role="button"
-      class="ph-media">
-       
-      
-  </a>
+          <a href="#" title="${element.title}">
+            <img src="Sample Photos/${photograph.name}/${element.image}" alt="${element.title}" role="button" class="ph-media">
+          </a>
  
-<div class="ph-work-elt-text">
-  <h2 class="ph-work-title">${media1[k].title}</h2>
-  <span class="ph-work-price">${media1[k].price}€</span>
-  <div class="ph-elt-like">
-      <span class="ph-work-like">
-          <a class="like-counter">${media1[k].likes}</a>
-      </span>
-      <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-  </div>
-</div>
-            
-<div id="box" aria-label="photographer likes and price">
-
-<span id="total-likes">${
-          media[1].likes +
-          media[2].likes +
-          media[3].likes +
-          media[4].likes +
-          media[5].likes +
-          media[6].likes +
-          media[7].likes +
-          media[8].likes +
-          media[9].likes
-         }
-</span>
-<i class="fas fa-heart" aria-label="likes"></i>
-<span>${photograph.price} €/ jour</span>
-
-
-</div>
-          `;
+          <div class="ph-work-elt-text">
+            <h2 class="ph-work-title">${element.title}</h2>
+            <span class="ph-work-price">${element.price}€</span>
+            <div class="ph-elt-like">
+              <span class="ph-work-like">
+                <a class="like-counter">${element.likes}</a>
+              </span>
+              <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+            </div>
+          </div>
+        `;
 
         myArticle2.classList.add("ph-work-elt");
-        
+
         section2.appendChild(myArticle2);
-      }
-
-
+      });
 
       // boucle video
-      for (var l = 0; l < media2.length; l++) {
-        // console.log(media2)
+      media2.forEach((video) => {
         const section2 = document.querySelector("#ph-works");
         var myArticle2 = document.createElement("article");
         myArticle2.innerHTML = /*html*/ `
       
-  <a href="#" title="${media2[l].title}">
-  <video controls="controls" src="Sample Photos/${photograph.name}/${media2[l].video}"
-                        role="button" class="ph-media"></video>
-       
-      
+  <a href="#" title="${video.title}">
+    <video controls="controls" src="Sample Photos/${photograph.name}/${video.video}"role="button" class="ph-media"></video>
   </a>
  <div class="ph-work-elt-text">
-  <h2 class="ph-work-title">${media2[l].title}</h2>
-  <span class="ph-work-price">${media2[l].price}€</span>
+    <h2 class="ph-work-title">${video.title}</h2>
+    <span class="ph-work-price">${video.price}€</span>
   <div class="ph-elt-like">
       <span class="ph-work-like">
-          <a class="like-counter">${media2[l].likes}</a>
+          <a class="like-counter">${video.likes}</a>
       </span>
-      <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+      <i class="far fa-heart" aria-label="likes" role="button" ></i>
   </div>
 </div>
-
-            
-
           `;
+        //remplissage coeur
+
+        const likes = document.querySelector(".like-counter");
+        let nbLikes = likes.textContent;
+        const likesPlus = ++nbLikes;
+        const likesMinus = --nbLikes;
+        console.log(likesMinus);
+        console.log(likesPlus);
+
+        $(function () {
+          $(".far").on("click", function () {
+            if ($(this).hasClass("far fa-heart")) {
+              $(this).removeClass("far fa-heart").addClass("fas fa-heart");
+              console.log(likesPlus);
+              document.querySelector(".like-counter").innerText = likesPlus;
+            } else {
+              $(this).removeClass("fas fa-heart").addClass("far fa-heart");
+              document.querySelector(".like-counter").innerText = likesMinus;
+            }
+          });
+        });
 
         myArticle2.classList.add("ph-work-elt");
-        
         section2.appendChild(myArticle2);
-      }
+      });
 
-
+      //Création div pour likes
+      main = document.querySelector("main");
+      var listLikes = document.querySelectorAll(".like-counter");
+      console.log(listLikes);
+      listLikes.forEach((corazon) => {
+        const likeQuantity = Number(corazon.textContent);
+        console.log(likeQuantity);
+        const existingTotal = Number(
+          document.getElementById("total-likes").innerText
+        );
+        console.log(existingTotal);
+        const newTotal = existingTotal + likeQuantity;
+        console.log(`${likeQuantity} + ${existingTotal} = ${newTotal}`);
+        document.getElementById("total-likes").innerText = newTotal;
+      });
     }
-
-    
   });
-
-
 };
-

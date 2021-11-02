@@ -1,6 +1,6 @@
 // Récupération de la chaine de requête dans l'url
 const queryString_url_id = window.location.search;
-console.log(queryString_url_id);
+// console.log(queryString_url_id);
 
 // //méthode 1 - pour extraire juste l'id
 // const leid = queryString_url_id.slice(4);
@@ -8,48 +8,44 @@ console.log(queryString_url_id);
 
 // méthode 2 - pour extraire l'id
 const urlSearchParams = new URLSearchParams(queryString_url_id);
-console.log(urlSearchParams);
+// console.log(urlSearchParams);
 
 const id = urlSearchParams.get("id");
-console.log(id);
+// console.log(id);
 
 // Récupération liste des photographes
 window.onload = function () {
   $.get("data.json", function (data) {
-    console.log(data);
-    console.log(data["photographers"]);
-    console.log(data["media"]);
+    // console.log(data);
+    // console.log(data["photographers"]);
+    // console.log(data["media"]);
 
     const photograph = data["photographers"].find(
       (photograph) => photograph.id == id
     );
-    console.log(photograph);
+    // console.log(photograph);
 
     profilFunction(photograph);
     function profilFunction(duval) {
-      console.log(duval);
-      const section = document.querySelector(".ph-profil");
-      var myArticle = document.createElement("article");
+      // console.log(duval);
+      const section = document.querySelector(".ph-infos");
+      // var myArticle = document.createElement("article");
 
       
-      myArticle.innerHTML = /*html*/ `
-
-              <div class="ph-infos">
-                <h2>${photograph.name}</h2>
+      section.innerHTML = /*html*/ `
+                
+                <div class="AAA"><h2>${photograph.name}</h2>
                 <p class="ph-city">${photograph.city}, ${photograph.country}</p>
                 <p class="ph-tagline">${photograph.tagline}</p>
-
-                
-                <div class="AAA">listooooooo</div>
-                
-              <button id="ph-contact" title="Contact Me">Contactez-moi</button>
-              </div>   
+                </div>
+              
               <img src="Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="${photograph.name}">
               
               
+
               `; 
       //liste pour les tags
-
+      var AAA= document.querySelector(".AAA")
       var allTag = document.createElement("ul");
       allTag.classList.add("tags");
       
@@ -63,9 +59,9 @@ window.onload = function () {
         listItem.textContent = "#" + superTags[j];
         
         allTag.appendChild(listItem);
+        AAA.appendChild(allTag);
 
-        myArticle.appendChild(allTag);
-        section.appendChild(myArticle);
+        section.appendChild(AAA);
       }
 
       //Photos des réalisations des photographes
@@ -73,14 +69,16 @@ window.onload = function () {
       const media = data["media"].filter((media) => media.photographerId == id);
       const media1 = media.filter((media) => media.image);
       const media2 = media.filter((media) => media.video);
-      const media3 = media1 + media2;
-      console.log(media1);
-      console.log(media2);
-      console.log(media3);
-
-      // console.log(media[k].image)
+     
+      
 
       // Boucle pour photo
+var copie=[];
+
+media1.forEach(image=>console.log(image));
+console.log(media1)
+
+
       for (var k = 0; k < media1.length; k++) {
         const section2 = document.querySelector("#ph-works");
         var myArticle2 = document.createElement("article");
@@ -108,8 +106,8 @@ window.onload = function () {
             
 <div id="box" aria-label="photographer likes and price">
 
-
-<span id="total-likes">${
+<span id="total-likes">
+// ${
 //           media[1].likes +
 //           media[2].likes +
 //           media[3].likes +
@@ -119,7 +117,8 @@ window.onload = function () {
 //           media[7].likes +
 //           media[8].likes +
 //           media[9].likes
-1         }
+         1 }
+         
 </span>
 <i class="fas fa-heart" aria-label="likes"></i>
 <span>${photograph.price} €/ jour</span>
@@ -137,7 +136,7 @@ window.onload = function () {
 
       // boucle video
       for (var l = 0; l < media2.length; l++) {
-        console.log(media2)
+        // console.log(media2)
         const section2 = document.querySelector("#ph-works");
         var myArticle2 = document.createElement("article");
         myArticle2.innerHTML = /*html*/ `
@@ -170,5 +169,10 @@ window.onload = function () {
 
 
     }
+
+    
   });
+
+
 };
+

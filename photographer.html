@@ -8,10 +8,10 @@
     <title>FishEye</title>
     <link rel="stylesheet" href="photographers.css">
     <link rel="stylesheet" href="modal.css">
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    
+
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                 alt="FishEye Home Page"></a>
     </header>
     <main>
-        
+
         <!-- HEADER -->
         <header id="ph-profil" aria-label="photographer information">
             <section id="ph-profil-header">
@@ -31,263 +31,127 @@
                     <div class="ph-infos">
 
                     </div>
-                    
 
-                    
+
+
                 </article>
             </section>
         </header>
 
         <!-- DROPDOWN -->
         <div class="works-sort">
-            
-            
+
+
             <div id="sort-wrapper">
                 <span id="sort-text">Trier par</span>
             </div>
-                
-                
-                <button class="sort-btn" aria-haspopup="listbox">Popularité<span class="fas fa-chevron-down arrow-down-open" role="button"></span></button>
-                <ul class="hidden-sort" role="listbox">
-                    <li class="sort" role="option">Popularité <span class="fas fa-chevron-up arrow-up-close"></span>
-                    </li>
-                    <li class="sort" role="option">Date</li>
-                    <li class="sort" role="option">Tître</li>
-                </ul>
-           
-        
+
+
+            <button class="sort-btn" aria-haspopup="listbox">
+                <div class="pop">
+                    <div>Popularité</div>
+                    <div class="date">Date</div>
+                    <div class="titre">Titre</div>
+                </div>
+                <div class="down"><i class="fas fa-chevron-down" role="button"></i></div>
+                <div class="up"><i class="fas fa-chevron-up" role="button"></i></div>
+
+            </button>
+            <!-- <div id="hidden-sort">
+
+            <ul class="hidden-sort" role="listbox">
+                <li class="sort" role="option">Popularité</li>
+                <li class="sort" role="option">Date</li>
+                <li class="sort" role="option">Tître</li>
+            </ul>
+
+            <div class="closeList">
+                <span class="fas fa-chevron-up arrow-up-close" role="button"></span>
+            </div>
+        </div> -->
+
+
         </div>
 
         <!-- WORK -->
         <section id='ph-works' aria-label='photographer works'>
-            <!-- <article class="ph-work-elt">
-                <a href="#" title="Lonesome">
-                    <img src="Sample Photos/Mimi/Travel_Lonesome.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Lonesome</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">88</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Hill side Color">
-                    <img src="Sample Photos/Mimi/Travel_HillsideColor.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Hill side Color</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">85</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Wednesday">
-                    <img src="Sample Photos/Mimi/Portrait_Wednesday.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Wednesday</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">34</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Nora">
-                    <img src="Sample Photos/Mimi/Portrait_Nora.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Nora</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">63</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Background">
-                    <img src="Sample Photos/Mimi/Portrait_Background.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Background</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">55</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Seaside Wedding">
-                    <img src="Sample Photos/Mimi/Event_SeasideWedding.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Seaside Wedding</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">25</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Pinto Wedding">
-                    <img src="Sample Photos/Mimi/Event_PintoWedding.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Pinto Wedding</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">88</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Benevides Wedding">
-                    <img src="Sample Photos/Mimi/Event_BenevidesWedding.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Benevides Wedding</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">77</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Wild" horses="">
-                    <video controls="controls" src="Sample Photos/Mimi/Animals_Wild_Horses_in_the_mountains.mp4"
-                        role="button" class="ph-media"></video>
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Wild Horses</h2>
-                    <span class="ph-work-price">60 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">142</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="142"></i>
-                    </div>
-                </div>
-            </article>
-            <article class="ph-work-elt">
-                <a href="#" title="Rainbow">
-                    <img src="Sample Photos/Mimi/Animals_Rainbow.jpg" alt="Travel Lonesome" role="button"
-                        class="ph-media">
-                </a>
-                <div class="ph-work-elt-text">
-                    <h2 class="ph-work-title">Rainbow</h2>
-                    <span class="ph-work-price">45 €</span>
-                    <div class="ph-elt-like">
-                        <span class="ph-work-like">
-                            <a class="like-counter">59</a>
-                        </span>
-                        <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
-                    </div>
-                </div>
-            </article> -->
 
+        
         </section>
-
+        
+    
+          
         <!-- BOX -->
-        <!-- <div id="box" aria-label="photographer likes and price">
+        <div id="box" aria-label="photographer likes and price">
+            <span id="total-likes">
+                0
+             </span>
+             <i class="fas fa-heart" aria-label="likes" ></i>
+             <span id="priceTjm"></span>
+             
+             
+                   
+        </div>
 
-
-            <span id="total-likes">680</span>
-            <i class="fas fa-heart" aria-label="likes"></i>
-            <span>400 €/ jour</span>
-
-
-        </div> -->
-
-        
-
-        
     </main>
 
 
 
-<!--MODAL-->
-<div role="dialog" id="form-dialog" aria-label="contact me form" aria-labelledby="form-title"
-aria-hidden="true">
-<form action="photographer-page.html" method="POST" id="contact-form">
-    <header aria-label="contact form header">
-        <h1 id="form-title">
-            <span>Contactez-moi</span>
-            <span id="ph-form-name"></span>
-        </h1>
-        <div class="content">
-            <span class="close" id="closeform"></span>
-            </div>
-    </header>
-    <!-- FIRST NAME -->
-    <div class="formData" data-error="Vous devez entrer votre prénom." data-error-visible="false">
-        <label for="first-name" id="label-firstname">Prénom</label>
-        <input name="first-name" id="first-name" aria-labelledby="label-firstname" placeholder="Prénom">
-    </div>
-    <!-- LAST NAME -->
-    <div class="formData" data-error="Vous devez entrer votre nom." data-error-visible="false">
-        <label for="last-name" id="label-lastname">Nom</label>
-        <input name="last-name" id="last-name" aria-labelledby="label-lastname" placeholder="Nom">
-    </div>
-    <!-- EMAIL -->
-    <div class="formData" data-error="Vous devez entrer un email valide." data-error-visible="false">
-        <label for="email" id="label-email">Email</label>
-        <input type="email" name="email" id="email" aria-labelledby="label-email"
-            placeholder="exemple@email.com">
-    </div>
-    <!-- MESSAGE -->
-    <div class="formData" data-error="Vous devez entrer votre message." data-error-visible="false">
-        <label for="message" id="label-message">Votre message</label>
-        <textarea name="message" id="message" cols="20" rows="5" aria-labelledby="label-message"
-            placeholder="Votre message..."></textarea>
-    </div>
-    <!-- SUBMIT -->
-    <input type="submit" value="Envoyer" class="form-submit" title="Send">
-</form>
-</div>
+    <!--MODAL-->
+    <div role="dialog" id="form-dialog" aria-label="contact me form" aria-labelledby="form-title" aria-hidden="true">
+        <form action="photographer-page.html" method="POST" id="contact-form">
+            <header aria-label="contact form header">
+                <h1 id="form-title">
+                    <span>Contactez-moi</span>
+                    <span id="ph-form-name"></span>
+                </h1>
+                <div class="content">
+                    <span class="close" id="closeform"><i class="far fa-window-close"></i></span>
+                </div>
+            </header>
+            <!-- FIRST NAME -->
+            <div class="formData" data-error="Vous devez entrer votre prénom." data-error-visible="false">
+                <label for="first-name" id="label-firstname">Prénom</label>
+                <input name="first-name" id="first-name" aria-labelledby="label-firstname" placeholder="Prénom">
+                <span class="firstErrorMsg">Veuillez entrer 2 caractères ou plus pour le champ du prénom</span>
 
-    
+            </div>
+            <!-- LAST NAME -->
+            <div class="formData" data-error="Vous devez entrer votre nom." data-error-visible="false">
+                <label for="last-name" id="label-lastname">Nom</label>
+                <input name="last-name" id="last-name" aria-labelledby="label-lastname" placeholder="Nom">
+                <span class="lastErrorMsg">Veuillez entrer 2 caractères ou plus pour le champ du nom</span>
+
+            </div>
+            <!-- EMAIL -->
+            <div class="formData" data-error="Vous devez entrer un email valide." data-error-visible="false">
+                <label for="email" id="label-email">Email</label>
+                <input type="email" name="email" id="email" aria-labelledby="label-email"
+                    placeholder="exemple@email.com">
+                <span class="emailErrorMsg">Veuillez entrer un email valide</span>
+
+            </div>
+            <!-- MESSAGE -->
+            <div class="formData" data-error="Vous devez entrer votre message." data-error-visible="false">
+                <label for="message" id="label-message">Votre message</label>
+                <textarea name="message" id="message" cols="20" rows="5" aria-labelledby="label-message"
+                    placeholder="Votre message..."></textarea>
+                <span class="messageErrorMsg">Vous devez entrer un message valide.</span>
+
+            </div>
+            <!-- SUBMIT -->
+            <input type="submit" value="Envoyer" class="form-submit" title="Send">
+        </form>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="modal.js"></script>
     <script src="photographer.js"></script>
-    
-    
-    
+    <script src="dropdown.js"></script>
+
+
+
 </body>
 
 </html>

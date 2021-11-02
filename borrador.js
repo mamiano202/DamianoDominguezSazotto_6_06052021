@@ -64,3 +64,20 @@ function imgPhotographer(jsonObj) {
 
 
 
+
+
+
+
+
+
+
+<div id="box" aria-label="photographer likes and price">
+
+<span id="total-likes">
+   ${
+ 1 }
+
+</span>
+<i class="fas fa-heart" aria-label="likes"></i>
+<span>${photograph.price} €/ jour</span>
+</div>

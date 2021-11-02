@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="photographers.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ph-work-elt-text">
+        <h2 class="ph-work-title">${element.title}</h2>
+        <span class="ph-work-price">${element.price}€</span>
+        <div class="ph-elt-like">
+          <span class="ph-work-like">
+            <a class="like-counter">${element.likes}</a>
+          </span>
+          <i class="far fa-heart heart-btn" aria-label="likes" role="button" data-value="88"></i>
+        </div>
+      </div>
+
+      <script src="dropdown.js"></script>
+      <script src="data.json"></script>
+</body>
+</html>
