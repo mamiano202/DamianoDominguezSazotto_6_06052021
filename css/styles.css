@@ -76,7 +76,7 @@ main > a {
   z-index: 1;
 }
 
-@media screen and (min-width: 1170px) {
+
   .tags {
     display: flex;
     justify-content: center;
@@ -86,7 +86,7 @@ main > a {
   section {
     margin-top: 5rem;
   }
-}
+
 
 @media screen and (min-width: 1170px) {
   h1 {
@@ -123,7 +123,7 @@ body {
 html {
   font-family: "DM Sans", sans-serif;
 }
-article{
+.cards{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +136,7 @@ article{
 }
   
 
-nav ul li:hover,
+nav ul li a:hover,
 li.actived {
   background-color: #901c1c;
   color: #fff;
@@ -145,7 +145,6 @@ li.actived {
 ul li {
   border: 0.5px solid #c4c4c4;
   border-radius: 11px;
-  color: #901c1c;
   font-size: 14px;
   font-weight: 500;
   list-style: none;
@@ -153,9 +152,13 @@ ul li {
   padding: 0.0625rem 0.375rem;
   text-decoration: none;
   transition: all 0.2s;
+  color: #901c1c;
   
 }
-.profil {
+ul li a{
+  color: #901c1c;
+}
+#Photographers {
   display: grid;
   height: max-content;
   gap: 27px;
@@ -172,7 +175,7 @@ ul li {
 
    
 
-.profil .pica,
+#Photographers .pica,
 .picb,
 .picc,
 .picd,
@@ -188,7 +191,7 @@ ul li {
   overflow: hidden;
   /* box-shadow: 0 0 7px #c1c1c1; */
 }
-.profil img {
+#Photographers img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -313,3 +316,30 @@ ul.tag{
 }
 
 
+@media screen and (max-width: 1170px) {
+  #Photographers {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
+}
+
+@media screen and (max-width: 650px){
+#main-photographers-link{
+  display: none;
+}
+#Photographers {
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f";
+}
+}

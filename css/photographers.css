@@ -19,13 +19,7 @@ header img {
   width: 12.5rem;
 }
 
-
-
-
-
-
-
-/*Photograph informations*/
+/*Photographers informations*/
 .ph-infos {
   display: flex;
   flex-direction: row-reverse;
@@ -52,7 +46,6 @@ header img {
   font-size: 15px;
   margin-bottom: 1rem;
 }
-
 
 #ph-profil-header {
   width: -moz-available;
@@ -86,13 +79,10 @@ header img {
   border-radius: 50%;
 }
 
-
 .ph-profil {
   background: #fafafa;
   padding: 2rem;
 }
-
-
 
 .tags {
   display: flex;
@@ -108,7 +98,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 2.8125rem 0;
+  margin: 3.8125rem 0;
   padding: 0 1.25rem;
 }
 .ph-work-elt {
@@ -136,23 +126,6 @@ section {
   width: 14.0625rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ul li {
   border-bottom: 0.5px solid #c4c4c4;
   color: #901c1c;
@@ -164,8 +137,6 @@ ul li {
   text-decoration: none;
   transition: all 0.2s;
 }
-
-
 
 #box {
   align-items: center;
@@ -215,7 +186,6 @@ ul li {
   cursor: pointer;
 }
 
-
 .ph-work-elt img,
 .ph-work-elt video {
   border-radius: 0.3125rem;
@@ -228,12 +198,12 @@ ul li {
   display: flex;
   margin-left: 2rem;
   margin-top: 2rem;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   width: 300px;
 }
 .sort-btn {
-  align-items: center;
+  /* align-items: center; */
   background: #901c1c;
   border: none;
   border-radius: 5px;
@@ -250,14 +220,52 @@ ul li {
 }
 
 #hidden-sort {
-  display:flex;
+  display: flex;
   background: #901c1c;
   z-index: 1;
   position: relative;
 }
-.hidden-sort{
+.hidden-sort {
   padding-left: 0;
 }
-.fas{
+.fas {
   /* display: none; */
+}
+
+@media screen and (max-width: 650px){
+.ph-profil{
+  padding: 0%;
+  background: white;
+}
+.ph-profil button{
+  top: 40rem;
+}
+  .ph-profil img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+.ph-infos h2{
+  font-size: 2em;
+}
+.ph-tagline{
+  font-size: 12px;
+}
+ul li{
+  font-size: 10px;
+}
+.ph-works{
+  padding: 0%;
+}
+.works-sort{
+  display: none;
+}
+.ph-work-title {
+  
+  width: 8.0625rem;
+  }
+  #box{
+    width: 12rem;
+  }
 }
