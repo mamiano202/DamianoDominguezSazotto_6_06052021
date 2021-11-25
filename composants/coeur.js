@@ -1,14 +1,22 @@
-class Coeur{
-    constructor(domTarget, callback){
-        this.DOM = document.createElement("i");
-        this.DOM.className="far fa-heart";
-        domTarget.appendChild(this.DOM);
-        this.DOM.onclick = ()=>{
-            this.active = !this.active;
-            callback(this.active);
-            this.DOM.classList.toggle("far");
-            this.DOM.classList.toggle("fas");
-        }
-        this.active = false;
+class Coeur extends Component{
+
+    /**
+     * [constructor description]
+     *
+     * @param   {HTMLElement}  domTarget  [domTarget description]
+     * @param   {Object}  props      [props description]
+     * @param   {Boolean} props.liked
+     * @param   {Function} props.callback
+     *
+     * @constructor
+     */
+    constructor(domTarget, props){
+        super(domTarget, props, "i");
+        let classes = "fa-heart ";
+        if (props.liked) classes+= " fas";
+        else classes+=" far";
+        this.DOM.className= classes;
+        this.DOM.onclick = props.callback;
     }
+    
 }

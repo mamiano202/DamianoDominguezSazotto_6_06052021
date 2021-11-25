@@ -12,7 +12,6 @@ request.send();
 
 request.onload = function () {
   var photographers = request.response;
-  // populateHeader(superphotographer);
   showPhotograph(photographers);
 };
 
@@ -34,7 +33,7 @@ function showPhotograph(jsonObj) {
         <div class="name">${photographer[i].name}</div>
         <div class="localisation">${photographer[i].city}, ${photographer[i].country}</div>
         <div class="slogan">${photographer[i].tagline}</div>
-        <div class="price">${photographer[i].price}€</div>
+        <div class="price">${photographer[i].price}€/jour</div>
     `;
 
     //liste pour les tags

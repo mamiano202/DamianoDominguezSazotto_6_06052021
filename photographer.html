@@ -14,13 +14,16 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
-    <script src="modal.js" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script> -->
+    <script src="js/modal.js" defer></script>
+    <script src="composants/component.js" defer></script>
     <script src="composants/coeur.js" defer></script>
+    <script src="composants/blocLikes.js"defer></script>
     <script src="composants/imageCard.js" defer></script>
     <script src="composants/videoCard.js" defer></script>
-    <script src="photographer.js" defer></script>
-    <script src="dropdown.js" defer></script>
+    <script src="js/photographer.js" defer></script>
+    <script src="js/dropdown.js" defer></script>
+    
 </head>
 
 <body>
@@ -41,8 +44,6 @@
 
                     </div>
 
-
-
                 </article>
             </section>
         </header>
@@ -58,9 +59,9 @@
 
             <button class="sort-btn" aria-haspopup="listbox">
                 <div class="pop">
-                    <div>Popularité</div>
-                    <div class="date">Date</div>
-                    <div class="titre">Titre</div>
+                    <div onclick="orderMedia(this)">Popularité</div>
+                    <div onclick="orderMedia(this)" class="date">Date</div>
+                    <div onclick="orderMedia(this)" class="titre">Titre</div>
                 </div>
                 <div class="down"><i class="fas fa-chevron-down" role="button"></i></div>
                 <div class="up"><i class="fas fa-chevron-up" role="button"></i></div>

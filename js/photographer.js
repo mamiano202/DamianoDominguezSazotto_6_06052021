@@ -15,7 +15,6 @@ const urlSearchParams = new URLSearchParams(queryString_url_id);
  * @type {Number}
  */
 const id = parseInt(urlSearchParams.get("id"));
-// console.log(id);
 const section = document.querySelector(".ph-infos");
 
 /**
@@ -52,7 +51,7 @@ window.onload = async function () {
 };
 
 function showMedia() {
-  // Boucle pour photo
+  // Boucle pour photo et video
   const section2 = document.querySelector("#ph-works");
   section2.innerText = "";
   totalInc = 0;
@@ -78,11 +77,10 @@ function initSection(photograph) {
   </div>
 
 <img src="Sample Photos/Photographers ID Photos/${photograph.portrait}" alt="${photograph.name}">
-
-
-
 `;
+
   document.getElementById("priceTjm").innerText = `${photograph.price} €/jour`;
+  
   //liste pour les tags
   const AAA = document.querySelector(".AAA");
   const allTag = document.createElement("ul");
@@ -90,8 +88,6 @@ function initSection(photograph) {
 
   // boucle pour les tags
   var superTags = photograph.tags;
-
-  // console.log(superTags);
   for (var j = 0; j < superTags.length; j++) {
     var listItem = document.createElement("li");
     listItem.textContent = "#" + superTags[j];
@@ -113,7 +109,9 @@ function updateLike(inc) {
   document.getElementById("total-likes").innerText = totalInc;
 }
 
-function orderMedia() {
+function orderMedia(filter) {
+  activeFilter = filter.innerText;
+  console.log(activeFilter)
   let tri;
   switch (activeFilter) {
     case "Popularité":
@@ -153,6 +151,7 @@ function orderMedia() {
   media = media.sort(tri);
   showMedia();
 }
+
 
 /*
 window.onload =  function () {
